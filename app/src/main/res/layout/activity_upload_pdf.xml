@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back01"
+    tools:context=".UploadPdfActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/custom_background_login">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_back_category_upload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark_blue"
+            android:src="@drawable/ic_back">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_pdf_category_upload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/dark_blue"
+            android:src="@drawable/ic_attach">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+        </com.google.android.material.imageview.ShapeableImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a new book"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/img_logo"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            >
+        </TextView>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        android:layout_marginTop="225dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/edt_book_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="20dp"
+                    android:background="@drawable/custom_textview_login"
+                    android:drawableLeft="@drawable/ic_pdf"
+                    android:drawablePadding="10dp"
+                    android:hint="Book Title"
+                    android:textColorHint="@color/gray_01">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_layout_1">
+                <EditText
+                    android:id="@+id/edt_book_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="20dp"
+                    android:background="@drawable/custom_textview_login"
+                    android:drawableStart="@drawable/ic_pdf"
+                    android:drawablePadding="10dp"
+                    android:hint="Book Description"
+                    android:textColorHint="@color/gray_01">
+
+                </EditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tv_category_upload"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/txt_layout_2"
+                android:background="@drawable/custom_textview_login"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_category"
+                android:hint="Book Category"
+                android:padding="20dp"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/ic_down"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tv_category_upload"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/dark_blue"
+                android:text="Upload"
+                android:textColor="@color/white"
+                ></androidx.appcompat.widget.AppCompatButton>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

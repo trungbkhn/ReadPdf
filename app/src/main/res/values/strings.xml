@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Book App</string>
+    <string name="app_name_welcome">Welcome to Book App</string>
+    <string name="with_out_login">CONTINUE WITHOUT LOGIN</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="new_user">Not have an Account? Sign up!"</string>
+    <string name="already_user">Already have an Account? Log In!"</string>
+    <string name="dash_board_user">Dash Board User</string>
+    <string name="dash_board_admin">Dash Board Admin</string>
+    <string name="dash_board_email">abc@gmail.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    android:orientation="vertical"
+    tools:context=".PdfListAdminActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/custom_background_login">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back_pdf_admin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_back"></androidx.appcompat.widget.AppCompatButton>
+
+        <TextView
+            android:id="@+id/tv_books"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Books"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/tv_pdf_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_books"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:text="Category"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="italic"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            app:queryHint="Search"></androidx.appcompat.widget.SearchView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            tools:listitem="@layout/layout_pdf"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>

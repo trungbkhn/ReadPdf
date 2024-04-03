@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".DashBoardUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_1_user"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/custom_background_login">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_person">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+
+        <TextView
+            android:id="@+id/tv_username_db"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/dash_board_user"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/tv_gmail_db"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username_db"
+            android:gravity="center"
+            android:text="@string/dash_board_email"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="italic">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_logout_db"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_logout">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_1_user"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:tabTextColor="@color/pink"
+        android:background="@android:color/transparent"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"
+        android:layout_marginTop="5dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</RelativeLayout>

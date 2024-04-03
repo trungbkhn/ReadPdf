@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="@drawable/shape_rec02">
+    <ImageButton
+        android:id="@+id/btn_back_dialog_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back_black"
+        android:padding="5dp"></ImageButton>
+    <TextView
+        android:id="@+id/tv_addComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/purple"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Add Comment"
+        ></TextView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_back_dialog_comment"
+        android:layout_marginTop="20dp"
+
+        android:hint="Comment"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rec_01"
+            android:drawableStart="@drawable/ic_comment"
+            android:drawablePadding="8dp"
+            android:inputType="textMultiLine|textCapSentences">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_summit"
+        android:layout_width="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textInputLayout"
+        android:text="Summit"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_btn">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>

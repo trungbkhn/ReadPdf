@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPdfActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/custom_background_login">
+
+        <TextView
+            android:id="@+id/tv_title_view_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Read Book"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/tv_subTitle_view_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_view_pdf"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="N/N"
+            android:textColor="@color/white"
+            android:textSize="15sp"></TextView>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_back_view_pdf"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark_blue"
+            android:src="@drawable/ic_back">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+    </RelativeLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_1">
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+    <ProgressBar
+        android:id="@+id/progress_viewPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+    </ProgressBar>
+
+</RelativeLayout>

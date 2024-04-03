@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back01"
+    tools:context=".RegisterActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/custom_background_login">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+        </com.google.android.material.imageview.ShapeableImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Account"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/img_logo"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            >
+        </TextView>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="225dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_layout_1_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/edt_name_res"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_textview_login"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawablePadding="10dp"
+                    android:hint="Name"
+                    android:textColorHint="@color/gray_01">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_layout_2_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="5dp"
+
+                android:layout_below="@+id/txt_layout_1_res">
+
+                <EditText
+                    android:id="@+id/edt_email_res"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_textview_login"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="10dp"
+                    android:hint="Email"
+                    android:textColorHint="@color/gray_01">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_layout_3_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="5dp"
+                app:passwordToggleEnabled="true"
+                android:layout_below="@+id/txt_layout_2_res">
+                <EditText
+                    android:id="@+id/edt_passWord_res"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_textview_login"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray_01">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_layout_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="5dp"
+                app:passwordToggleEnabled="true"
+                android:layout_below="@+id/txt_layout_3_res">
+                <EditText
+                    android:id="@+id/edt_cpassWord_Res"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_textview_login"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword"
+                    android:hint="Confirm Password"
+                    android:textColorHint="@color/gray_01">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_layout_4"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_textview_login"
+                android:backgroundTint="@color/dark_blue"
+                android:text="REGISTER"
+                android:textColor="@color/white"
+                ></androidx.appcompat.widget.AppCompatButton>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/already_user"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+
+</RelativeLayout>
